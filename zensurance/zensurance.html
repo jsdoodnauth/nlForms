@@ -1,0 +1,42 @@
+<head>
+  <title>zensurance</title>
+</head>
+
+<body>
+
+  <header>
+    Natural Language
+  </header>
+
+  {{> nlForm}}
+</body>
+
+<template name="nlForm">
+  <form id="nl-form" class="nl-form">
+    My business is named <input type="text" value="" placeholder="_______________" /> and
+    <br />operates in <input type="text" value="" placeholder="_______________" />.  It is a
+    <select>
+      <option value="1" selected>New/Existing</option>
+      <option value="1">New</option>
+      <option value="2">Existing</option>
+    </select>
+    business and
+    <br />last year my revenues were $<input type="text" value="" placeholder="amount" />.  The best
+    <br />industry description for my business is
+    <select>
+      <option value="1" selected>industry</option>
+      <option value="1">Aerospace</option>
+      <option value="1">Business</option>
+      <option value="1">Construction</option>
+      <option value="3">Information Technology</option>
+      <option value="2">Law</option>
+      <option value="3">Medicine</option>
+      <option value="3">Other</option>
+    </select>.
+    <div class="nl-submit-wrap">
+      <button class="nl-submit" type="submit">Submit</button>
+    </div>
+    <div class="nl-overlay"></div>
+  </form>
+<script>var nlform = new NLForm( document.getElementById( 'nl-form' ) );</script>
+</template>
