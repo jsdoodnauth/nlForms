@@ -6,7 +6,7 @@
 
   <header>
     <div class='header-logo'>
-      <img src='/client/img/logo-zensurance.png' alt="zensurance" />
+      <img src='/img/logo-zensurance.png' alt="zensurance" />
     </div>
     <div class='header-menu'>
       <ul class='nav'>
@@ -22,17 +22,17 @@
 </body>
 
 <template name="nlForm">
-  <form id="nl-form" class="nl-form">
-    <div class="steps panel1 first">My business is named <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" /></div>
-    <div class="steps panel2"> and<br />operates in <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />.  It is a
+  <form id="nl-form" class="nl-form steps-container">
+    <div class="steps panel1 first">My business is named <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;company name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" /></div>
+    <div class="steps panel2 show"><br /> and operates in <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />.  It is a
     <select>
-      <option value="1" selected>New/Existing</option>
+      <option selected>New/Existing</option>
       <option value="1">New</option>
       <option value="2">Existing</option>
     </select>
     business and</div>
-    <div class="steps panel3"><br />last year my revenues were $<input type="text" value="" placeholder="amount" />.  The best</div>
-    <div class="steps panel4"><br />industry description for my business is
+    <div class="steps panel3 show"><br />last year my revenues were $<input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />.  The best</div>
+    <div class="steps panel4 show"><br />industry description for my business is
       <select>
         <option value="1" selected>industry</option>
         <option value="1">Aerospace</option>
@@ -44,7 +44,7 @@
         <option value="3">Other</option>
       </select>.
     </div>
-    <div class="steps panel5 last">
+    <div class="steps panel5 show last">
       <div class="nl-submit-wrap">
         <button class="nl-submit" type="submit">Get a Quote</button>
       </div>

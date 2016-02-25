@@ -31,6 +31,8 @@ header {
 .header-menu { display: inline-block; width: 49.5%; padding: 0 1em; }
 
 .header-logo { padding-left: 1.5em; }
+.header-logo img { padding: 1.25em 0 0; }
+
 .header-menu { text-align: right; }
 .header-menu ul.nav { list-style: none;}
 .header-menu ul.nav li { display:inline-block; padding: 0 0.5em; }
@@ -236,6 +238,7 @@ input:focus::-ms-input-placeholder {
 	padding: 0 0.75em;
 	font-weight: bold;
 	letter-spacing: 3px;
+	font-size: 80%;
 }
 
 .no-touch .nl-form .nl-submit:hover,
@@ -267,13 +270,14 @@ input:focus::-ms-input-placeholder {
 	transition-delay: 0s;
 }
 
-.steps { display:inline; }
-.steps.first {  }
+.steps-container { position: relative; }
+.steps { position: relative; top:-50%; opacity: 0; -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
+.steps.first { display:inline; opacity: 1; top: 0; }
 .steps.last { }
-.steps.show { }
+.steps.show { display: inline; opacity: 1; top: 0; }
 
-.panel1 { }
-.panel2 { }
-.panel3 { }
-.panel4 { }
-.panel5 { }
+.panel1 { z-index: 1; }
+.panel2 { z-index: 2;  }
+.panel3 { z-index: 3;  }
+.panel4 { z-index: 4;  }
+.panel5 { z-index: 5;  }
