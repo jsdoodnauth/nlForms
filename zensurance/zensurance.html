@@ -23,33 +23,21 @@
 
 <template name="nlForm">
   <form id="nl-form" class="nl-form steps-container">
-    <div class="steps panel1 first">My business is named <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;company name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" /></div>
-    <div class="steps panel2 show"><br /> and operates in <input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />.  It is a
-    <select>
-      <option selected>New/Existing</option>
-      <option value="1">New</option>
-      <option value="2">Existing</option>
+    <div class="steps panel1 first">My business is named <input class="input1" type="text" value="" placeholder="company name" /></div>
+    <div class="steps panel2">and <br /> operates in <input class="input2" type="text" value="" placeholder="city" />.  It is a
+    <select class="input3">
+      <option value="0" selected>new/existing</option>
+      <option value="1">new</option>
+      <option value="2">existing</option>
     </select>
-    business and</div>
-    <div class="steps panel3 show"><br />last year my revenues were $<input type="text" value="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />.  The best</div>
-    <div class="steps panel4 show"><br />industry description for my business is
-      <select>
-        <option value="1" selected>industry</option>
-        <option value="1">Aerospace</option>
-        <option value="1">Business</option>
-        <option value="1">Construction</option>
-        <option value="3">Information Technology</option>
-        <option value="2">Law</option>
-        <option value="3">Medicine</option>
-        <option value="3">Other</option>
-      </select>.
+    business</div>
+    <div class="steps panel3"> and<br />last year my revenues were $<input class="input4" type="text" value="" placeholder="0" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)' /></div>
+    <div class="steps panel4">.  The best<br />industry description for my business is <input class="input5" type="text" value="" placeholder="industry" />.
     </div>
-    <div class="steps panel5 show last">
+    <div class="steps panel5 last">
       <div class="nl-submit-wrap">
         <button class="nl-submit" type="submit">Get a Quote</button>
       </div>
     </div>
-    <div class="nl-overlay"></div>
   </form>
-<script>var nlform = new NLForm( document.getElementById( 'nl-form' ) );</script>
 </template>
