@@ -24,7 +24,7 @@ if (Meteor.isClient) {
   });
 
   Template.nlForm.events({
-    'change .input2': function(e) {
+    'change .input2': function(e) {console.log('hit2');
         if ($('.input2').val() && ($('.input3').val() > 0)) {
           if ($('.input3').val() == '1') {
               $('.panel4').addClass('show');
@@ -39,7 +39,7 @@ if (Meteor.isClient) {
   });
 
   Template.nlForm.events({
-    'change .input3': function(e) {
+    'change .input3': function(e) {console.log('hit3');
         if ($('.input2').val() && ($('.input3').val() > 0)) {
           if ($('.input3').val() == '1') {
               $('.panel4').addClass('show');
@@ -61,6 +61,7 @@ if (Meteor.isClient) {
 
   Template.nlForm.events({
     'change .input4': function(e) {
+      console.log('hit4');
         $('.panel4').addClass('show');
     }
   });
