@@ -121,11 +121,13 @@ if (Meteor.isClient) {
     'click .btn-submit': function(e) {
       var businessName = $('.inputCompany').val();
       var city = $('.inputCity').val();
-      var status = $('.inputStatus option:selected').text();
+      var status = $('.inputStatus').val();
       var rev = $('.inputRev').val();
       var industry = $('.inputIndustry').val();
 
-      var str = "Company: " + businessName + "<br />City: " + city + "<br /> " + status + " business";
+      var str = "Company: " + businessName + "<br />City: " + city + "<br /> ";
+      if (status == 1) { str += "Business: New" }
+      if (status == 2) { str += "Business: Existing" }
       if (rev.length > 0) { str += "<br />Revenue: $" + rev; }
       str += "<br />Industry: " + industry;
       $('.overlay .data-output').html(str);
