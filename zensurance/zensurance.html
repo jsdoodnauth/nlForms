@@ -22,24 +22,37 @@
 </body>
 
 <template name="nlForm">
-  <form id="nl-form" class="nl-form steps-container">
-    <div class="steps panel1 first">My business is named <input id="inputCompany" class="inputCompany" type="text" value="" placeholder="company name" /></div>
-    <div class="steps panel2">and <br /> operates in <input id='inputCity' class="inputCity" type="text" value="" placeholder="city" />.  It is a
+  <form id="nl-form" class="nl-form steps-container" onkeypress="return event.keyCode != 13;">
+    <div class="steps panel1 first">My business is named <input id="inputCompany" class="inputField inputCompany" type="text" value="" placeholder="company name" /></div>
+    <div class="steps panel2">and <br /> operates in <input id="inputCity" class="inputField inputCity" type="text" value="" placeholder="city" /></div>
+    <div class="steps panel3">
+      . It is a&nbsp;
     <select id="inputStatus" class="inputStatus">
       <option value="0" selected>new/existing</option>
       <option value="1">new</option>
       <option value="2">existing</option>
-    </select>
+    </select>&nbsp;
     business</div>
-    <div class="steps panel3"> and<br />last year my revenues were $<input id="inputRev" class="inputRev" type="text" value="" placeholder="0" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)' /></div>
-    <div class="steps panel4">.  The best<br />industry description for my business is <input id="inputIndustry" class="inputIndustry" type="text" value="" placeholder="industry" />.</div>
-    <div class="steps panelemail last">
-      <span id="emailText">Please submit your email so that we can notify you when coverage is available: </span><input id="inputEmail" class="inputEmail" type="text" placeholder="email" />.
+    <div class="steps panel4"> and<br />last year my revenues were $<input id="inputRev" class="inputField inputRev" type="text" value="" placeholder="0" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)' /></div>
+    <div class="steps panel5">.  The best industry description for my business is <input id="inputIndustry" class="inputField inputIndustry" type="text" value="" placeholder="industry" /></div>
+    <div class="steps panelemail">
+      <span id="emailText">. My email address is </span><input id="inputEmail" class="inputField inputEmail" type="text" placeholder="email" />.
+      <div class="email-confirm steps">
+        We currently don't cover your location but would you like us to notify you when we begin to cover your location?
+          <div class="btn-container">
+            <button class="nl-submit btn-email" type="button">Yes</button>
+            <button class="nl-submit btn-email" type="button">No</button>
+          </div>
+      </div>
     </div>
     <div class="steps panelsubmit last">
       <div class="nl-submit-wrap">
-        <button class="nl-submit" type="submit">Get a Quote</button>
+        <button class="nl-submit btn-submit" type="button">Get a Quote</button>
       </div>
     </div>
   </form>
+  <div class="overlay">
+    <div class="heading">Thanks for taking the time to visit us.</div>
+    <div class="data-output"></div>
+  </div>
 </template>

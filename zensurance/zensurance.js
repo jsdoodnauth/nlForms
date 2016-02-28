@@ -1,6 +1,7 @@
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
+  var companyAvailable = ["acme corp"];
   var cityAvilable = ["toronto","hamilton","ottawa"];
   var industryAvilable = ["accounting","advertising","aerospace","architecture","banking","business","computer","financial","insurance","medical","medicine","retail","technology" ];
 
@@ -14,63 +15,86 @@ if (Meteor.isClient) {
   Template.nlForm.events({
     'change .inputCompany': function(e) {
       //Session.set('counter', Session.get('counter') + 1);
+      var company = $(".inputCompany").val().toLowerCase();
+      var found = $.inArray(company, companyAvailable) > -1;
+      if (found) {
+        $('.inputCity').val("Toronto");
+        $('.inputStatus').val(2);
+        $('.inputRev').val("100,000");
+        $('.inputIndustry').val("Financial");
+
         $('.panel2').addClass('show');
+        $('.panel3').addClass('show');
+        $('.panel4').addClass('show');
+        $('.panel5').addClass('show');
+        $('.panelemail').hide();
+        $('.panelsubmit').addClass('show');
+      }
+      else {
+        $('.panel2').addClass('show');
+      }
     },
 
-    'change .inputCity': function(e) {console.log('hit2');
-        if ($('.inputCity').val() && ($('.inputStatus').val() > 0)) {
+    'change .inputCity': function(e) {
           var city = $(".inputCity").val().toLowerCase();
           var found = $.inArray(city, cityAvilable) > -1;
           if (found) {
-            if ($('.inputStatus').val() == '1') {
-                $('.panel3').hide();
-                $('.panel4').removeAttr('style','display:none').addClass('show');
-                $('.panelemail').removeClass('show');
-            }
-            if ($('.inputStatus').val() == '2') {
               $('.panel3').removeAttr('style','display:none').addClass('show');
-              $('.panel4').removeClass('show');
+              $('.panel4').removeAttr('style','display:none');
+              $('.panel5').removeAttr('style','display:none');
               $('.panelemail').removeClass('show');
-            }
+              $('.panelsubmit').removeClass('show');
           }
           else {
             $('.panel3').hide();
             $('.panel4').hide();
+            $('.panel5').hide();
             $('.panelemail').addClass('show');
+            $('.panelsubmit').removeClass('show');
           }
-        }
+
       },
 
-    'change .inputStatus': function(e) {console.log('hit3');
-        if ($('.inputCity').val() && ($('.inputStatus').val() > 0)) {
+    'change .inputStatus': function(e) {
+        if ($('.inputStatus').val() > 0) {
           var city = $(".inputCity").val().toLowerCase();
           var found = $.inArray(city, cityAvilable) > -1;
-          if (found) {
-            if ($('.inputStatus').val() == '1') {
-                $('.panel3').hide();
-                $('.panel4').removeAttr('style','display:none').addClass('show');
-                $('.panelemail').removeClass('show');
-            }
-            if ($('.inputStatus').val() == '2') {
-              $('.panel3').removeAttr('style','display:none').addClass('show');
-              $('.panel4').removeClass('show');
+
+          if ($('.inputStatus').val() == '1') {
+              $('.panel4').hide();
+              $('.panel5').removeAttr('style','display:none').addClass('show');
               $('.panelemail').removeClass('show');
-            }
+              $('.panelsubmit').removeClass('show');
           }
-          else {
-            $('.panel3').hide();
-            $('.panel4').hide();
-            $('.panelemail').addClass('show');
+          if ($('.inputStatus').val() == '2') {
+            $('.panel4').removeAttr('style','display:none').addClass('show');
+            $('.panel5').removeClass('show');
+            $('.panelemail').removeClass('show');
+            $('.panelsubmit').removeClass('show');
           }
+
         }
     },
 
     'keyup .inputRev': function(e) {
         $('.inputRev').val(commaSeparateNumber($('.inputRev').val()));
     },
+    'keyup .inputField': function(e) {
+      if (e.keyCode == 13) {
+        console.log('hello');
+            var inps = $("input, select"); //add select too
+            for (var x = 0; x < inps.length; x++) {
+                if (inps[x] == this) {
+                    while ((inps[x]).name == (inps[x + 1]).name) {
+                    x++;
+                    }
+                    if ((x + 1) < inps.length) $(inps[x + 1]).focus();
+                }
+            }   e.preventDefault();
+        }
+    },
     'change .inputRev': function(e) {
-      console.log('hit4');
-        $('.panel4').removeAttr('style','display:none').addClass('show');
+        $('.panel5').removeAttr('style','display:none').addClass('show');
     },
 
     'change .inputIndustry': function(e) {
@@ -87,8 +111,27 @@ if (Meteor.isClient) {
     },
 
     'change .panelemail': function(e) {
-      $('.panelsubmit').addClass('show');
+      $('.email-confirm').addClass('show');
+    },
+    'click .btn-email': function(e) {
+      $('.overlay').addClass('show');
+    },
+    'click .btn-submit': function(e) {
+      var businessName = $('.inputCompany').val();
+      var city = $('.inputCity').val();
+      var status = $('.inputStatus option:selected').text();
+      var rev = $('.inputRev').val();
+      var industry = $('.inputIndustry').val();
+
+      var str = "Company: " + businessName + "<br />City: " + city + "<br /> " + status + " business";
+      if (rev.length > 0) { str += "<br />Revenue: $" + rev; }
+      str += "<br />Industry: " + industry;
+      $('.overlay .data-output').html(str);
+      $('.overlay .heading').hide();
+      $('.overlay').addClass('show');
     }
+
+
   });
 }
 
