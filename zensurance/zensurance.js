@@ -29,6 +29,7 @@ if (Meteor.isClient) {
         $('.panel5').addClass('show');
         $('.panelemail').hide();
         $('.panelsubmit').addClass('show');
+        $('.btn-submit').focus();
       }
       else {
         $('.panel2').addClass('show');
@@ -94,6 +95,7 @@ if (Meteor.isClient) {
         }
     },
     'change .inputRev': function(e) {
+        console.log('hit');
         $('.panel5').removeAttr('style','display:none').addClass('show');
     },
 
