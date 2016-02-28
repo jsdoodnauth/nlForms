@@ -70,7 +70,7 @@ if (Meteor.isClient) {
     },
     'change .inputRev': function(e) {
       console.log('hit4');
-        $('.panel4').addClass('show');
+        $('.panel4').removeAttr('style','display:none').addClass('show');
     },
 
     'change .inputIndustry': function(e) {

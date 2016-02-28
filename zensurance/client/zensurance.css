@@ -199,6 +199,7 @@ header {
 	letter-spacing: 3px;
 	font-size: 80%;
 	border-radius: 0.25em;
+	margin: 0.5em auto;
 }
 
 .no-touch .nl-form .nl-submit:hover,
