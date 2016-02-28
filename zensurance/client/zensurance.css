@@ -65,11 +65,11 @@ header {
 	padding: 0;
 }
 
-.nl-form .input1 { width: 180px; }
-.nl-form .input2 { width: 120px; }
-.nl-form .input3 { }
-.nl-form .input4,
-.nl-form .input5 { width: 150px; }
+.nl-form .inputCompany { width: 180px; }
+.nl-form .inputCity { width: 120px; }
+.nl-form .inputStatus { }
+.nl-form .inputRev,
+.nl-form .inputIndustry { width: 150px; }
 
 /* normalize the input elements, make them look like everything else */
 .nl-form input,
@@ -207,7 +207,7 @@ header {
 }
 
 .steps-container { position: relative; }
-.steps { position: relative; top:-50%; opacity: 0; -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
+.steps { position: relative; top:-100%; opacity: 0; -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
 .steps.first { display:inline; opacity: 1; top: 0; }
 .steps.last { }
 .steps.show { display: inline; opacity: 1; top: 0; }
@@ -216,4 +216,5 @@ header {
 .panel2 { z-index: 2;  }
 .panel3 { z-index: 3;  }
 .panel4 { z-index: 4;  }
-.panel5 { z-index: 5;  }
+.panelsubmit { z-index: 5; }
+.panelsubmit { z-index: 6; }

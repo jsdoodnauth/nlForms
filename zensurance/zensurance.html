@@ -23,18 +23,20 @@
 
 <template name="nlForm">
   <form id="nl-form" class="nl-form steps-container">
-    <div class="steps panel1 first">My business is named <input class="input1" type="text" value="" placeholder="company name" /></div>
-    <div class="steps panel2">and <br /> operates in <input class="input2" type="text" value="" placeholder="city" />.  It is a
-    <select class="input3">
+    <div class="steps panel1 first">My business is named <input id="inputCompany" class="inputCompany" type="text" value="" placeholder="company name" /></div>
+    <div class="steps panel2">and <br /> operates in <input id='inputCity' class="inputCity" type="text" value="" placeholder="city" />.  It is a
+    <select id="inputStatus" class="inputStatus">
       <option value="0" selected>new/existing</option>
       <option value="1">new</option>
       <option value="2">existing</option>
     </select>
     business</div>
-    <div class="steps panel3"> and<br />last year my revenues were $<input class="input4" type="text" value="" placeholder="0" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)' /></div>
-    <div class="steps panel4">.  The best<br />industry description for my business is <input class="input5" type="text" value="" placeholder="industry" />.
+    <div class="steps panel3"> and<br />last year my revenues were $<input id="inputRev" class="inputRev" type="text" value="" placeholder="0" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)' /></div>
+    <div class="steps panel4">.  The best<br />industry description for my business is <input id="inputIndustry" class="inputIndustry" type="text" value="" placeholder="industry" />.</div>
+    <div class="steps panelemail last">
+      <span id="emailText">Please submit your email so that we can notify you when coverage is available: </span><input id="inputEmail" class="inputEmail" type="text" placeholder="email" />.
     </div>
-    <div class="steps panel5 last">
+    <div class="steps panelsubmit last">
       <div class="nl-submit-wrap">
         <button class="nl-submit" type="submit">Get a Quote</button>
       </div>
