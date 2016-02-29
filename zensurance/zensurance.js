@@ -33,6 +33,11 @@ if (Meteor.isClient) {
       }
       else {
         $('.panel2').addClass('show');
+        $('.panel3').removeClass('show');
+        $('.panel4').removeClass('show');
+        $('.panel5').removeClass('show');
+        $('.panelemail').removeAttr('style','display:none');
+        $('.panelsubmit').removeClass('show');
       }
     },
 
