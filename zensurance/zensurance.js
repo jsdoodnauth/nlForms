@@ -32,6 +32,11 @@ if (Meteor.isClient) {
         $('.btn-submit').focus();
       }
       else {
+        $('.inputCity').val("");
+        $('.inputStatus').val(0);
+        $('.inputRev').val("");
+        $('.inputIndustry').val("");
+
         $('.panel2').addClass('show');
         $('.panel3').removeClass('show');
         $('.panel4').removeClass('show');
