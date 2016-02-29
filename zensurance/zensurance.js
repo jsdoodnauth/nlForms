@@ -1,6 +1,4 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
   var companyAvailable = ["acme corp"];
   var cityAvilable = ["toronto","hamilton","ottawa"];
   var industryAvilable = ["accounting","advertising","aerospace","architecture","banking","business","computer","financial","insurance","medical","medicine","retail","technology" ];
