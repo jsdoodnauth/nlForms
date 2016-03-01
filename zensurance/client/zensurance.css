@@ -83,6 +83,7 @@ header {
 	font-weight: inherit;
 	line-height: inherit;
 	display: inline-block;
+	text-align: center;
 	padding: 0;
 	margin: 0;
 	-webkit-appearance: none;
@@ -92,13 +93,14 @@ header {
 .nl-form select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	text-indent: 1px;
+	text-indent: 0px;
 	text-overflow: '';
 }
 
 .nl-form select::-ms-expand {
     display: none;
 }
+.nl-form select option { font-size: 0.95em; font-weight: normal; }
 
 .nl-form input:focus {
 	outline: none;
