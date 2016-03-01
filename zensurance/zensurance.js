@@ -85,26 +85,13 @@ if (Meteor.isClient) {
         }
     },
     'keyup .inputField': function(e) {
-      if (e.keyCode == 13) {
-        console.log('hello');
-            var inps = $("input, select"); //add select too
-            for (var x = 0; x < inps.length; x++) {
-                if (inps[x] == this) {
-                    while ((inps[x]).name == (inps[x + 1]).name) {
-                    x++;
-                    }
-                    if ((x + 1) < inps.length) $(inps[x + 1]).focus();
-                }
-            }   e.preventDefault();
-        }
     },
     'change .inputRev': function(e) {
-        console.log('hit');
         $('.panel5').removeAttr('style','display:none').addClass('show');
     },
 
-    'keyup .inputRev': function(e) {
-        $('.inputRev').val(commaSeparateNumber($('.inputRev').val()));
+    'keypress .inputRev': function(e) {
+      $('.inputRev').val(commaSeparateNumber($('.inputRev').val()));
     },
 
     'change .inputIndustry': function(e) {
@@ -155,5 +142,5 @@ if (Meteor.isServer) {
 
 function commaSeparateNumber(num){
   var out = num.replace(/\,/g,"");
-  return out.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+  return out.toString().replace(/(\d)(?=(\d{2})+(?!\d))/g, "$1,")
 }
