@@ -84,10 +84,6 @@ if (Meteor.isClient) {
 
         }
     },
-
-    'keyup .inputRev': function(e) {
-        $('.inputRev').val(commaSeparateNumber($('.inputRev').val()));
-    },
     'keyup .inputField': function(e) {
       if (e.keyCode == 13) {
         console.log('hello');
@@ -105,6 +101,10 @@ if (Meteor.isClient) {
     'change .inputRev': function(e) {
         console.log('hit');
         $('.panel5').removeAttr('style','display:none').addClass('show');
+    },
+
+    'keyup .inputRev': function(e) {
+        $('.inputRev').val(commaSeparateNumber($('.inputRev').val()));
     },
 
     'change .inputIndustry': function(e) {
