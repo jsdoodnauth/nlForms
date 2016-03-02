@@ -44,11 +44,13 @@ header {
 
 /* Main Content */
 .main {
+}
+
+.main.full-width {
 	margin: 5% auto 0;
 	max-width: 50em;
 	text-align: center;
-	padding: 2em;
-
+	padding: 2em;	
 }
 
 /* general style for the form */

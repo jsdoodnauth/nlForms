@@ -1,0 +1,166 @@
+<template name="createQuote">
+  <div class='left-panel'>
+    <div class='progress-steps-container'>
+      <ul class='progress-steps'>
+        <li>Coverage</li>
+        <li>Structure and Size</li>
+        <li>Location</li>
+        <li>Operations</li>
+        <li>Finalize</li>
+      </ul>
+    </div>
+
+<!-- ****************** -->
+<!-- ***** STEP 1 ***** -->
+    <div class="services-container">
+      <p>1. Select the types of insurance you want.  Below what small business owners like yourself typically get</p>
+      <ul class='service-list'>
+        <li>
+          <h3>General Liability <span class="small">- (recommended) 75% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+          <p>This is the most basic coverage, and includes protection from the following types of events:</p>
+          <ul>
+            <li>Someone getting hurt, or sustaining damage to their property (e.g., vehicle, house), as a result of your premises, operations or products/services</li>
+            <li>Your insurance carrier would cover costs such as medical expenses, legal fees, and the payment to the individual that was impacted</li>
+          </ul>
+          <a href="#">More details</a>
+        </li>
+        <li>
+          <h3>Errors and Omissions <span class="small">- 75% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+          <p>This would cover lawsuit costs when a client sues you for things such as</p>
+          <ul>
+            <li>This coverage is for those times where you make a mistake in the service you provided (e.g. shipped something to the wrong address, draft incorrect architectural drawings)</li>
+            <li>This is also called Malpractice Insurance, or Professional Liability Insurance</li>
+            <li>Your insurance carrier would cover costs such as legal fees, and the payment to the individual that was impacted to rectify the situation</li>
+          </ul>
+          <a href="#">More details</a>
+        </li>
+        <li>
+          <h3>Directors & Officers <span class="small">- 50% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+        </li>
+        <li>
+          <h3>Business interruption <span class="small">- 25% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+        </li>
+        <li>
+          <h3>Property <span class="small">- 10% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+        </li>
+        <li>
+          <h3>Auto <span class="small">- 10% of companies like you get this</span></h3>
+          <button type="button" name="button">Add +</button>
+        </li>
+
+      </ul>
+    </div>
+
+<!-- ****************** -->
+<!-- ***** STEP 2 ***** -->
+    <div class="companyStructure-container">
+      <p>2. Now tell us more about your company:</p>
+      <div class="companyStructure-form">
+        <div class="row">
+          <div class="span-8">In what year was the business established under current ownership</div>
+          <div class="span-4">
+              <select>
+                <option>2010</option>
+                <option>2000</option>
+                <option>1990</option>
+                <option>1980</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span-8">How many years of experience does the owner have in the same or related field?</div>
+            <div class="span-4">
+              <select>
+                <option>1</option>
+                <option>2-5</option>
+                <option>5-10</option>
+                <option>>10</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span-8">What best describes your business's ownership structure? If you don't know, select "I don't know"</div>
+            <div class="span-4">
+              <select>
+                <option>I don't know</option>
+                <option>Answer 2</option>
+                <option>Answer 3</option>
+                <option>>Answer 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span-12">How many people work in the business today?</div>
+          </div>
+          <div class="row">
+            <div class="span-3">Owners</div>
+            <div class="span-3"><input type="text" name="name" value=""></div>
+            <div class="span-3">Full-time employees</div>
+            <div class="span-3"><input type="text" name="name" value=""></div>
+          </div>
+          <div class="row">
+            <div class="span-3">Part-time employees</div>
+            <div class="span-3"><input type="text" name="name" value=""></div>
+            <div class="span-3">Contractors</div>
+            <div class="span-3"><input type="text" name="name" value=""></div>
+          </div>
+          <div class="row">
+            <div class="span-3"> </div>
+            <div class="span-3"> </div>
+            <div class="span-3">Total</div>
+            <div class="span-3"><input type="text" name="name" value="" readonly></div>
+          </div>
+          <div class="row">
+            <div class="span-8">What is your approximate annual payroll expense for yourself, your full-time, part-time, and temporary employees? (Not including contractors)</div>
+            <div class="span-4">
+              <select>
+                <option>$200,000</option>
+                <option>Answer 2</option>
+                <option>Answer 3</option>
+                <option>>Answer 4</option>
+              </select>
+            </div>
+          </div>
+      </div>
+    </div>
+
+<!-- ****************** -->
+<!-- ***** STEP 3 ***** -->
+    <div class="companyLocation-container">
+      <p>3. Now tell us more about your company [placeholder text]:</p>
+    </div>
+
+<!-- ****************** -->
+<!-- ***** STEP 4 - SELECTION ***** -->
+
+
+<!-- ****************** -->
+<!-- ***** STEP 5 - CONFIRM/PAYMENT ***** -->
+
+
+<!-- ****************** -->
+<!-- ***** FINAL ***** -->
+
+
+  </div>
+  <div class='right-panel'>
+    <div class='progress-bar-section'>
+      Progress bar
+    </div>
+    <div class='product-cart'>
+      List of services Added
+    </div>
+    <div class='product-comparison-list'>
+      List of products to compare
+    </div>
+    <div class='btn-container'>
+      <button type="button" name="button">Next Step</button>
+    </div>
+  </div>
+
+</template>
