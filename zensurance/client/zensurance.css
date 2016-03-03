@@ -8,6 +8,10 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
+.right { float:right; }
+
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -19,7 +23,34 @@ body {
 
 a {
 	text-decoration: none;
+	color: #00BCD4;
 }
+
+
+/* Responsive Rows/Columns Layout */
+.container-fluid:before, .container-fluid:after { display: table; line-height: 0; content: ""; }
+.container-fluid:after {clear: both; }
+
+.row-fluid { width: 100%; *zoom: 1; margin-bottom:1.9607843%;}
+	.row-fluid:before, .row-fluid:after { display: table; content: ""; }
+	.row-fluid:after { clear: both; }
+	.row-fluid > [class*="span"] { float: left; margin-left:  1.94901%; }
+	.row-fluid > [class*="span"]:first-child { margin-left: 0; }
+	.row-fluid > .span1 { width: 6.542%; }
+	.row-fluid > .span2 { width: 15.039%; }
+	.row-fluid > .span2a { width: 19.039%; }
+	.row-fluid > .span3 { width: 23.535%; }
+	.row-fluid > .span4 { width: 32.031%; }
+	.row-fluid > .span5 { width: 40.527%; }
+	.row-fluid > .span6 { width: 49.023%; }
+	.row-fluid > .span7 { width: 57.519%; }
+	.row-fluid > .span7a { width: 72%; }
+	.row-fluid > .span8 { width: 66.015%; }
+	.row-fluid > .span9 { width: 74.511%; }
+	.row-fluid > .span9a { width: 81.511%;}
+	.row-fluid > .span10 { width: 83.007%; }
+	.row-fluid > .span11 { width: 91.503%; }
+	.row-fluid > .span12 { width: 100%; *width: 99.94680851063829%; }
 
 
 /* Header Style */
@@ -50,7 +81,7 @@ header {
 	margin: 5% auto 0;
 	max-width: 50em;
 	text-align: center;
-	padding: 2em;	
+	padding: 2em;
 }
 
 /* general style for the form */
@@ -124,16 +155,16 @@ header {
 .nl-form select  {
 	line-height: inherit;
 	display: inline-block;
-	color: #16C3D3;
+	color: #00BCD4;
 	cursor: pointer;
-	border-bottom: 1px dashed #16C3D3;
+	border-bottom: 1px dashed #00BCD4;
 }
 
 /* drop-down list / text element */
 .nl-field ul {
 	position: absolute;
 	visibility: hidden;
-	background: #16C3D3;
+	background: #00BCD4;
 	left: -0.5em;
 	top: 50%;
 	font-size: 80%;
@@ -196,7 +227,7 @@ header {
 	text-transform: uppercase;
 	cursor: pointer;
 	position: relative;
-	background: #16C3D3;
+	background: #00BCD4;
 	color: #fff;
 	padding: 0 0.75em;
 	font-weight: bold;
@@ -212,10 +243,10 @@ header {
 }
 
 .steps-container { position: relative; }
-.steps { position: relative; top:-100%; opacity: 0; -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
+.steps { position: relative; top:-100%; opacity: 0; visibility: hidden; -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
 .steps.first { display:inline; opacity: 1; top: 0; }
 .steps.last { }
-.steps.show { display: inline; opacity: 1; top: 0; }
+.steps.show { display: inline; opacity: 1; top: 0; visibility: visible; }
 
 .panel1 { z-index: 1; }
 .panel2 { z-index: 2;  }
@@ -253,3 +284,73 @@ header {
 
 .overlay .heading { font-size: 2em; }
 .data-output { font-size: 1.25em; }
+
+/******************/
+/* Create Quote */
+
+
+
+.left-panel { background: #F4F4F4; display: inline-block; width: 66.5%; vertical-align: top; padding: 2em;  }
+.right-panel { display: inline-block; width: 33%; vertical-align: top;}
+
+.left-panel .button { padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; background: #FFF; color:#00BCD4; border: 1px solid #00BCD4;}
+.left-panel .button:hover { background: #00BCD4; color:#FFF; cursor: pointer;}
+.left-panel input,
+.left-panel select { padding: 0.5em; color: #999; background-color: #FFF; border: 1px solid #D0CECF; border-radius: 0.25em; }
+.left-panel input.small { width: 3em; }
+.left-panel input.full,
+.left-panel select.full { width: 100%; }
+
+.progress-steps-container {  }
+.progress-steps-container .progress-steps { margin: 0 auto; list-style: none; }
+
+ .step-instuctions { font-weight: bold; }
+
+/******************/
+/* Step 1 */
+
+.services-container { margin: 0 auto; }
+.services-container ul.service-list { list-style: none; padding: 0; }
+.services-container ul.service-list > li { background: #FFF; padding: 2em; margin-bottom: 1em; box-shadow: 2px 2px 4px #999; }
+.services-container ul.service-list > li .button { float:right; }
+.services-container ul.service-list > li h3 { margin-top: 0; font-size: 1.5em; }
+.services-container ul.service-list > li h3 .small { font-size: 0.75em; font-style: italic; font-weight: normal; color: #B0B0B0; }
+.services-container ul.service-list > li li { list-style-type: disc; }
+.services-container ul.service-list > li a { padding-top: 1em; display: inline-block; }
+
+/******************/
+/* Step 2 */
+
+.companyStructure-container { margin: 0 auto; }
+.companyStructure-container .companyStructure-form { margin: 0 auto; width: 75%; }
+
+/******************/
+/* Step 3 */
+
+.companyLocation-container { margin: 0 auto; }
+.companyLocation-container .companyLocation-form { margin: 0 auto; width: 75%; }
+
+/******************/
+/* Step 4 */
+
+.finalizeService-container { margin: 0 auto; }
+.priceTable-container { border-top: 1px dotted #ccc; padding: 1em 0; }
+.priceTable-container:first-child { border-top:0 none; padding: 0em 0; }
+.priceTable-container ul { list-style: none; margin: 0; padding: 0; }
+.priceTable-container ul h3 { font-size: 1.5em; margin: 0.125em;  }
+.priceTable-container ul h4 { font-size: 1.25em; margin: 0; }
+.priceTable-container ul h4 .small { display:block; font-size: 0.5em; font-style: italic; font-weight: normal; }
+.priceTable-container ul.priceTable-Defs {}
+.priceTable-container ul.priceTable-Selection {}
+.priceTable-container ul.priceTable-Selection li { text-align: center; vertical-align: baseline; margin-bottom:2px; margin-right: 1px;}
+.priceTable-container ul.priceTable-Defs li.heading,
+.priceTable-container ul.priceTable-Selection li.heading { height: 5em; width: 100%; padding-top: 0.75em; }
+.priceTable-container ul.priceTable-Defs li.value,
+.priceTable-container ul.priceTable-Selection li.value { height: 5em; width: 100%; padding-top: 1.75em; }
+
+.priceTable-container ul.priceTable-Selection li.heading { background-color: #EAEAE6; }
+.priceTable-container ul.priceTable-Selection li.value { background-color: #FFF; }
+.priceTable-container ul.priceTable-Selection.active li.heading { background-color: #7AD8E4; }
+.priceTable-container ul.priceTable-Selection.active li.value { background-color: #D9F1F5; }
+
+.priceTable-Element.span2 { margin: 1px; }
