@@ -9,10 +9,11 @@
         <li>Finalize</li>
       </ul>
     </div>
+    <div class="steps-container">
 
 <!-- ****************** -->
 <!-- ***** STEP 1 ***** -->
-    <div class="services-container">
+    <div class="services-container active">
       <p class="step-instuctions">1. Select the types of insurance you want.  Below what small business owners like yourself typically get</p>
       <ul class='service-list'>
         <li>
@@ -296,11 +297,15 @@
 <!-- ****************** -->
 <!-- ***** FINAL ***** -->
 
-
+  </div>
+  <input type="hidden" id="hidSteps" value="1">
   </div>
   <div class='right-panel'>
     <div class='progress-bar-section'>
-      Progress bar
+      <div class="progress-bar-value">Accuracy <span class="val">50%</span></div>
+      <div class="progress-bar">
+        <div class="progress-bar-completed"></div>
+      </div>
     </div>
     <div class='product-cart'>
       List of services Added
@@ -309,7 +314,8 @@
       List of products to compare
     </div>
     <div class='btn-container'>
-      <button type="button" name="button">Next Step</button>
+      <button type="button" class='link-button hide' id="btnBackStep">Back</button>
+      <button type="button" class='button' id="btnNextStep">Next Step</button>
     </div>
   </div>
 
