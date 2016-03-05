@@ -298,8 +298,8 @@ header {
 
 
 
-.left-panel { background: #F4F4F4; display: inline-block; width: 66.5%; vertical-align: top; padding: 2em; position: absolute; height: 100%;  }
-.right-panel { display: inline-block; width: 33%; height: 100%; vertical-align: top; position: fixed; right: 0; top:0; margin-top: 60px; background-color: #FFF; z-index: 5; }
+.left-panel { background: #F4F4F4; display: inline-block; width: 100%; padding-right: 250px; vertical-align: top; padding: 2em; position: absolute; height: 100%;  }
+.right-panel { display: inline-block; width: 250px; height: 100%; vertical-align: top; position: fixed; right: 0; top:0; margin-top: 60px; background-color: #FFF; z-index: 5; }
 
 .left-panel .button { padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; background: #FFF; color:#00BCD4; border: 1px solid #00BCD4;}
 .left-panel .button:hover { background: #00BCD4; color:#FFF; cursor: pointer;}
@@ -380,7 +380,7 @@ header {
 .services-container,
 .companyStructure-container,
 .companyLocation-container,
-.finalizeService-container { opacity: 0; top: 100%; visibility: hidden; position: absolute; }
+.finalizeService-container { opacity: 0; top: 100%; visibility: hidden; position: absolute; width:100%; }
 
 .services-container.active,
 .companyStructure-container.active,
