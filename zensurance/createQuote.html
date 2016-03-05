@@ -1,19 +1,157 @@
 <template name="createQuote">
-  <div class='left-panel'>
+  <div class='left-panel carrier-selection-container full-width-container'>
+    <div class="steps-container">
+      <p class="step-instuctions">Select which of the reputable carriers below from which you would like to purchase insurance</p>
+      <div class='carrier-selection-list'>
+        <ul>
+          <li>
+              <div  class="carrier-logo"><img src="/img/company1.png" alt="" /></div><div class="price-container"><span class="price"> $200<span class="per">/mo</span></span></div><img src="/img/stars-rating-5.png" alt="" />
+          </li>
+          <li>
+            <div  class="carrier-logo"><img src="/img/company2.png" alt="" /></div><div class="price-container"><span class="price"> $225<span class="per">/mo</span></span></div><img src="/img/stars-rating-4-5.png" alt="" />
+          </li>
+          <li>
+            <div  class="carrier-logo"><img src="/img/company3.png" alt="" /></div><div class="price-container"><span class="price"> $250<span class="per">/mo</span></span></div><img src="/img/stars-rating-5.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='left-panel payment-container full-width-container'>
+    <div class="steps-container">
+      <p class="step-instuctions">You have elected to buy the following coverage</p>
+
+      <div class="payment-inner-container">
+        <div class="textCenter">
+          <img src="/img/company1.png" alt="" />
+          <div class="price-large">
+            $200<span class="per">/mo</span> or $2400<span class="per">/year</span>
+          </div>
+        </div>
+        <div class="dotted-line"></div>
+        <h2>Key features of your package</h2>
+        <div class="row-fluid">
+          <div class="span4">
+            <ul>
+              <li>Abc</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <ul>
+              <li>Abc</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <ul>
+              <li>Abc</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+              <li>Abc def</li>
+              <li>Abc def ghi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dotted-line"></div>
+        <h3>Please check the boxes to confirm: </h3>
+        <div class="row-fluid">
+          <div class="span1">
+            <input id="confirm1" type="checkbox" name="confirm" value="yes">
+          </div>
+          <div class="span11">
+            <label for="confirm1">I agree to accept delivery of the insurance policy and related documents via email to the address provided and agree to consent in electronic transactions.</label>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span1">
+            <input id="confirm2" type="checkbox" name="confirm" value="yes">
+          </div>
+          <div class="span11">
+            <label for="confirm2">I have read the information above and confirm it is correct.  By checking this box and providing the premium payment I agree that I am entering into a binding agreement.</label>
+          </div>
+        </div>
+        <div class="dotted-line"></div>
+        <h3>Card Information:</h3>
+        <form id="payment-form">
+          <div class="row-fluid">
+            <div class="span6 textRight">Name on Card
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span6 textRight">Credit card number
+            </div>
+            <div class="span6">
+                <input type="text" />
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span6 textRight">Expiry date
+            </div>
+            <div class="span6">
+              <select>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span6 textRight">Security code
+            </div>
+            <div class="span6">
+                <input type="text" class="cvv" style="width:5em"/>
+            </div>
+          </div>
+          <br />
+          <div class="textCenter">
+            <button type="button" class='button btnGreen' id="btnPayment">Get Insured</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class='left-panel completion-container full-width-container'>
+    <div class="steps-container">
+      <h1 class="finalTitle">Congrats!</h1>
+      <p class="step-instuctions">
+        We have sent you an email with the details of your coverage.<br />
+        <br />
+        We have also created an account just for you so that you may be able to log in and manage your coverage and insurance needs.<br />
+        <br />
+        <a href='#'>See how your account central looks like</a>
+      </p>
+      <img src="/img/bag-complete.png" alt="" />
+    </div>
+  </div>
+
+  <div class='left-panel service-selection-container'>
     <div class='progress-steps-container'>
       <ul class='progress-steps'>
-        <li>Coverage</li>
-        <li>Structure and Size</li>
-        <li>Location</li>
-        <li>Operations</li>
-        <li>Finalize</li>
+        <li class='step1 active'><span class='bar'></span>Coverage</li>
+        <li class='step2'><span class='bar'></span>Structure and Size</li>
+        <li class='step3'><span class='bar'></span>Location</li>
+        <li class='step4'><span class='bar'></span>Operations</li>
+        <li class='step5'><span class='bar'></span>Finalize</li>
       </ul>
     </div>
     <div class="steps-container">
 
 <!-- ****************** -->
 <!-- ***** STEP 1 ***** -->
-    <div class="services-container active">
+    <div class="services-container active animated">
       <p class="step-instuctions">1. Select the types of insurance you want.  Below what small business owners like yourself typically get</p>
       <ul class='service-list'>
         <li>
@@ -132,7 +270,7 @@
 
 <!-- ****************** -->
 <!-- ***** STEP 3 ***** -->
-    <div class="companyLocation-container">
+    <div class="companyLocation-container animated">
       <p class="step-instuctions">3. Now tell us more about your company [placeholder text]:</p>
       <div class="companyLocation-form">
         <div class="row-fluid">
@@ -185,9 +323,15 @@
     </div>
 
 <!-- ****************** -->
-<!-- ***** STEP 4 - SELECTION ***** -->
+<!-- ***** STEP 4 - OPERATIONS  ***** -->
+<div class="companyOperations-container animated">
+  <p class="step-instuctions">4. Now tell us more about your company operations[placeholder text]:</p>
+</div>
 
-    <div class="finalizeService-container">
+<!-- ****************** -->
+<!-- ***** STEP F - FINALIZE ***** -->
+
+    <div class="finalizeService-container animated">
       <div class="row-fluid priceTable-container">
         <div class="span5">
           <ul class="priceTable-Defs">
@@ -298,7 +442,7 @@
 <!-- ***** FINAL ***** -->
 
   </div>
-  <input type="hidden" id="hidSteps" value="1">
+
   </div>
   <div class='right-panel'>
     <div class='progress-bar-section'>
@@ -311,12 +455,23 @@
       List of services Added
     </div>
     <div class='product-comparison-list'>
-      List of products to compare
+      <ul>
+        <li>
+          <img src="/img/company1-bw.png" alt="" /><div class="price-container"><span class="ellipsis"> .................. </span><span class="price"> $200<span class="per">/mo</span></span></div>
+        </li>
+        <li>
+          <img src="/img/company2-bw.png" alt="" /><div class="price-container"><span class="ellipsis"> .................. </span><span class="price"> $225<span class="per">/mo</span></span></div>
+        </li>
+        <li>
+          <img src="/img/company3-bw.png" alt="" /><div class="price-container"><span class="ellipsis"> .................. </span><span class="price"> $250<span class="per">/mo</span></span></div>
+        </li>
+      </ul>
     </div>
     <div class='btn-container'>
       <button type="button" class='link-button hide' id="btnBackStep">Back</button>
       <button type="button" class='button' id="btnNextStep">Next Step</button>
     </div>
   </div>
+  <input type="hidden" id="hidSteps" value="1">
 
 </template>

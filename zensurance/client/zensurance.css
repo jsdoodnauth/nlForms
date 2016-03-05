@@ -14,6 +14,9 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .textRight { text-align: right; }
 
 .hide { display:none; }
+
+.dotted-line { border-top: 1px dotted #ccc; }
+
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #2E3E4F;
@@ -60,7 +63,7 @@ body { padding-top: 57px; }
 header {
 	border-bottom: 2px solid #CCC;
 	z-index: 1000;
-	height: 57px;
+	height: 80px;
 	position: fixed;
 	top:0;
 	width: 100%;
@@ -68,12 +71,12 @@ header {
 }
 
 .header-logo,
-.header-menu { display: inline-block; width: 49.5%; padding: 0 1em; }
+.header-menu { display: inline-block; width: 49.5%; padding: 0 1em; margin: 0.75em auto; }
 
 .header-logo { padding-left: 1.5em; }
 .header-logo img { padding: 1.25em 0 0; }
 
-.header-menu { text-align: right; }
+.header-menu { text-align: right;}
 .header-menu ul.nav { list-style: none;}
 .header-menu ul.nav li { display:inline-block; padding: 0 0.5em; }
 
@@ -298,8 +301,26 @@ header {
 
 
 
-.left-panel { background: #F4F4F4; display: inline-block; width: 100%; padding-right: 250px; vertical-align: top; padding: 2em; position: absolute; height: 100%;  }
-.right-panel { display: inline-block; width: 250px; height: 100%; vertical-align: top; position: fixed; right: 0; top:0; margin-top: 60px; background-color: #FFF; z-index: 5; }
+.left-panel { background: #F4F4F4; display: inline-block; width: 100%; vertical-align: top; position: absolute; height: 100%;  }
+.right-panel { display: inline-block; width: 376px; height: 100%; vertical-align: top; position: fixed; right: 0; top:0; padding:112px 2em 2em; background-color: #FFF; z-index: 5; }
+
+.left-panel.service-selection-container { padding:2em 408px 2em 2em; }
+.left-panel.full-width-container { padding:2em;   }
+
+.left-panel.full-width-container .steps-container { margin: 0 auto; text-align: center; }
+.left-panel.carrier-selection-container .steps-container .step-instuctions { margin: 2em 0 1em; }
+
+.left-panel.payment-container { }
+.left-panel.payment-container .payment-inner-container { width: 585px; margin: 0 auto; text-align: left; background-color: #FFF; padding: 2em; }
+.left-panel.payment-container .payment-inner-container .price-large { margin: 0.5em auto; }
+.price-large { font-size: 2.25em; }
+.price-large .per { font-size: 0.5em; font-weight: normal; vertical-align: super; padding-left: 2px; }
+#payment-form .textRight { padding-top: 6px; }
+.payment-inner-container h2 { margin: 0.5em; font-weight: 400; }
+.payment-inner-container ul li { margin: 0.25em auto; }
+.left-panel.completion-container { background-color: #FFF; }
+.left-panel.completion-container .steps-container { width: 585px; }
+.left-panel.completion-container h1.finalTitle { font-size: 4em; }
 
 .left-panel .button { padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; background: #FFF; color:#00BCD4; border: 1px solid #00BCD4;}
 .left-panel .button:hover { background: #00BCD4; color:#FFF; cursor: pointer;}
@@ -309,20 +330,56 @@ header {
 .left-panel input.full,
 .left-panel select.full { width: 100%; }
 
-.right-panel .btn-container { position: absolute; bottom:5em; right:1em; }
+.right-panel .btn-container { position: absolute; bottom:2em; right:2em; }
 .right-panel .button { background-color: #AEC300; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; color:#FFF; border: 0;}
 .right-panel .link-button { background-color: #FFF; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; border: 0; color:#00BCD4;  }
-
-.progress-bar-section { margin: 2em auto; text-align: center; }
+.button.btnGreen { background-color: #AEC300; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; color:#FFF; border: 0;}
+.button.btnGreen:focus,
+.button.btnGreen:active { background-color: #AEC300; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; color:#FFF; border: 0; }
+.progress-bar-section { margin:0em auto 2em; text-align: center; }
 .progress-bar-section .progress-bar-value { display:inline-block; padding: 0 1em 0 0;}
-.progress-bar-section .progress-bar { background-color: #EAEAE6; width: 15em; height: 1em; border-radius: 5em; display:inline-block; text-align: left; }
+.progress-bar-section .progress-bar { background-color: #EAEAE6; width: 185px; height: 1em; border-radius: 5px; margin: 0.125em 0 0; vertical-align: top; display:inline-block; text-align: left; }
 .progress-bar-section .progress-bar .progress-bar-completed { width: 0%; height: 1em; background-color: #AEC300; display:inline-block; border-radius: 5em 0 0 5em; -webkit-transition:width linear 0.5s;  transition:width linear 0.5s; }
 
-.progress-steps-container { margin: 1em 0 3em; }
-.progress-steps-container ul.progress-steps { margin: 0 auto; list-style: none; text-align: center; }
-.progress-steps-container ul.progress-steps li { display:inline-block; margin: 0 2em; }
+.progress-steps-container { margin: 1em 0 1em; }
+.progress-steps-container ul.progress-steps { margin: 0 auto; padding: 0; list-style: none; text-align: center; }
+.progress-steps-container ul.progress-steps li { display:inline-block; margin: 0; position: relative; font-weight: 400; font-size: 0.865em; }
+.progress-steps-container ul.progress-steps li .bar { display:inline-block; width: 100%; height: 13px; background-color: #e7e7e7; min-width: 110px;}
+	.progress-steps-container ul.progress-steps li .bar:before { content:""; display:inline-block; width: 8px; height: 13px; background: url('/img/progress-arrows.png') no-repeat 0 0; position: absolute; left: -7px; }
+	.progress-steps-container ul.progress-steps li .bar:after { content:""; display:inline-block; width: 8px; height: 13px; background: url('/img/progress-arrows.png') no-repeat -7px 0; position: absolute; right: -1px; }
+	.progress-steps-container ul.progress-steps li.active { color: #00bcd2; }
+	.progress-steps-container ul.progress-steps li.active .bar { background-color: #00bcd2; }
+	.progress-steps-container ul.progress-steps li.active .bar:before { background: url('/img/progress-arrows-active.png') no-repeat 0 0;  }
+	.progress-steps-container ul.progress-steps li.active .bar:after { background: url('/img/progress-arrows-active.png') no-repeat -7px 0; }
+	.progress-steps-container ul.progress-steps li.complete { color: #b7b9b8; }
+	.progress-steps-container ul.progress-steps li.complete .bar { background-color: #b7b9b8; }
+	.progress-steps-container ul.progress-steps li.complete .bar:before { background: url('/img/progress-arrows-complete.png') no-repeat 0 0;  }
+	.progress-steps-container ul.progress-steps li.complete .bar:after { background: url('/img/progress-arrows-complete.png') no-repeat -7px 0; }
+	.progress-steps-container ul.progress-steps li.active:first-child .bar:before { content:""; background-image: none; background-color: #00bcd2; border-radius: 5px; left: -5px; }
+	.progress-steps-container ul.progress-steps li.complete:first-child .bar:before { content:""; background-image: none; background-color: #b7b9b8; border-radius: 5px; left: -5px; }
 
- .step-instuctions { font-weight: bold; }
+.step-instuctions { font-weight: bold; margin: 1em 0 2em; }
+
+.product-comparison-list { }
+	.product-comparison-list ul { list-style: none; margin:0; padding:0; }
+		.product-comparison-list ul li { font-size: 1.25em; width: 100%; margin:1.5em 0; display:block; position: relative; }
+		.product-comparison-list ul li img {   }
+		.product-comparison-list ul li .price-container { position: absolute; right: 0; bottom: 0; }
+		.product-comparison-list ul li .ellipsis { font-size: 0.75em; letter-spacing: 3px; }
+		.product-comparison-list ul li .price { font-weight: 400; font-size: 1.25em; }
+		.product-comparison-list ul li .price .per { font-size: 0.5em; font-weight: normal; vertical-align: super; padding-left: 2px; }
+
+.carrier-selection-list { }
+	.carrier-selection-list ul { list-style: none; margin:0; padding:0; }
+		.carrier-selection-list ul li { font-size: 1.25em; width: 340px; height: 280px; margin:1.5em 1em; display:inline-block; background-color:#FFF; vertical-align: top; cursor: pointer; }
+		.carrier-selection-list ul li:hover { box-shadow: 2px 2px 4px #AAA; }
+		.carrier-selection-list ul li img { vertical-align: bottom;  }
+		.carrier-selection-list ul li .carrier-logo { height: 90px; width: 340px; vertical-align: bottom; text-align: center; display:table-cell; }
+		.carrier-selection-list ul li .price-container { display:block; margin: 1.5em auto; }
+		.carrier-selection-list ul li .price { font-weight: 400; font-size: 2em; }
+		.carrier-selection-list ul li .price .per { font-size: 0.5em; font-weight: normal; vertical-align: super; padding-left: 2px; }
+
+.services-container { margin: 0 auto; }
 
 /******************/
 /* Step 1 */
@@ -331,8 +388,9 @@ header {
 .services-container ul.service-list { list-style: none; padding: 0; }
 .services-container ul.service-list > li { background: #FFF; padding: 2em; margin-bottom: 1em; box-shadow: 2px 2px 4px #999; }
 .services-container ul.service-list > li .button { float:right; }
-.services-container ul.service-list > li h3 { margin-top: 0; font-size: 1.5em; }
+.services-container ul.service-list > li h3 { margin: 0.25em auto; font-size: 1.5em; }
 .services-container ul.service-list > li h3 .small { font-size: 0.75em; font-style: italic; font-weight: normal; color: #B0B0B0; }
+.services-container ul.service-list > li p { margin-top: 1.5em; }
 .services-container ul.service-list > li li { list-style-type: disc; }
 .services-container ul.service-list > li a { padding-top: 1em; display: inline-block; }
 
@@ -351,8 +409,13 @@ header {
 /******************/
 /* Step 4 */
 
+.companyOperations-container { margin: 0 auto; }
+
+/******************/
+/* Step 5 */
+
 .finalizeService-container { margin: 0 auto; }
-.priceTable-container { border-top: 1px dotted #ccc; padding: 1em 0; }
+.priceTable-container { border-top: 1px dotted #ccc; padding: 1em 0; margin:1em 0 0 5%; }
 .priceTable-container:first-child { border-top:0 none; padding: 0em 0; }
 .priceTable-container ul { list-style: none; margin: 0; padding: 0; }
 .priceTable-container ul h3 { font-size: 1.5em; margin: 0.125em;  }
@@ -375,14 +438,32 @@ header {
 
 /******************/
 /* Animations */
+
+.progress-steps-container ul.progress-steps li { -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
+
+.carrier-selection-list ul li { -webkit-transition:all linear 0.15s;  transition:all linear 0.15s; }
+
 .steps-container { position: relative; }
 .steps-container > div { -webkit-transition:all linear 0.5s;  transition:all linear 0.5s; }
 .services-container,
 .companyStructure-container,
 .companyLocation-container,
+.companyOperations-container,
 .finalizeService-container { opacity: 0; top: 100%; visibility: hidden; position: absolute; width:100%; }
 
 .services-container.active,
 .companyStructure-container.active,
 .companyLocation-container.active,
+.companyOperations-container.active,
 .finalizeService-container.active { opacity: 1; top: 0; visibility: visible;  }
+
+.carrier-selection-container,
+.payment-container,
+.completion-container {
+	position: absolute; width:100%; display:none; top: 80px;
+	-webkit-transition:all linear 0.15s;  transition:all linear 0.15s;
+ }
+
+.carrier-selection-container.active,
+.payment-container.active,
+.completion-container.active {   visibility: visible;  }
