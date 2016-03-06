@@ -155,7 +155,7 @@
       <p class="step-instuctions">1. Select the types of insurance you want.  Below what small business owners like yourself typically get</p>
       <ul class='service-list'>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd1" value="General Liability">Add +</button>
           <h3>General Liability <span class="small">- (recommended) 75% of companies like you get this</span></h3>
           <p>This is the most basic coverage, and includes protection from the following types of events:</p>
           <ul>
@@ -165,7 +165,7 @@
           <a href="#">More details</a>
         </li>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd2" value="Errors and Omissions">Add +</button>
           <h3>Errors and Omissions <span class="small">- 75% of companies like you get this</span></h3>
           <p>This would cover lawsuit costs when a client sues you for things such as</p>
           <ul>
@@ -176,19 +176,19 @@
           <a href="#">More details</a>
         </li>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd3" value="Directors & Officers">Add +</button>
           <h3>Directors & Officers <span class="small">- 50% of companies like you get this</span></h3>
         </li>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd4" value="Business interruption">Add +</button>
           <h3>Business interruption <span class="small">- 25% of companies like you get this</span></h3>
         </li>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd5" value="Property">Add +</button>
           <h3>Property <span class="small">- 10% of companies like you get this</span></h3>
         </li>
         <li>
-          <button type="button" name="button" class="button">Add +</button>
+          <button type="button" name="button" class="button btnAdd btnAdd6" value="Auto">Add +</button>
           <h3>Auto <span class="small">- 10% of companies like you get this</span></h3>
         </li>
 
@@ -238,21 +238,21 @@
           </div>
           <div class="row-fluid">
             <div class="span3 textRight">Owners</div>
-            <div class="span3"><input class="small textCenter" type="text" name="name" value=""></div>
+            <div class="span3"><input class="small textCenter empField empField1" type="text" name="empField" value="" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)'></div>
             <div class="span3 textRight">Full-time employees</div>
-            <div class="span3"><input class="small textCenter" type="text" name="name" value=""></div>
+            <div class="span3"><input class="small textCenter empField empField2" type="text" name="empField" value="" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)'></div>
           </div>
           <div class="row-fluid">
             <div class="span3 textRight">Part-time employees</div>
-            <div class="span3"><input class="small textCenter" type="text" name="name" value=""></div>
+            <div class="span3"><input class="small textCenter empField empField3" type="text" name="empField" value="" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)'></div>
             <div class="span3 textRight">Contractors</div>
-            <div class="span3"><input class="small textCenter" type="text" name="name" value=""></div>
+            <div class="span3"><input class="small textCenter empField empField4" type="text" name="empField" value="" onkeypress='return event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)'></div>
           </div>
           <div class="row-fluid">
             <div class="span3">&nbsp;</div>
             <div class="span3">&nbsp;</div>
             <div class="span3 textRight">Total</div>
-            <div class="span3"><input class="small textCenter" type="text" name="name" value="" readonly></div>
+            <div class="span3"><input class="small textCenter empTotal" type="text" name="empTotal" value="" readonly></div>
           </div>
           <div class="row-fluid">
             <div class="span8">What is your approximate annual payroll expense for yourself, your full-time, part-time, and temporary employees? (Not including contractors)</div>
@@ -343,11 +343,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection active">
+          <ul class="priceTable-Selection rdServiceSelection-table rdServiceSelection-bronze">
             <li class="heading">
-              <h4>Bronze<span class="small">75% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdServiceSelection1">
+                <h4>Bronze<span class="small">75% pick this</span>
+                <input type="radio" id="rdServiceSelection1" name="rdServiceSelection1" class="rdServiceSelection" value="bronze">
+                </h4>
+              </label>
             </li>
             <li class="value">$1M</li>
             <li class="value">$2000</li>
@@ -356,11 +358,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection">
+          <ul class="priceTable-Selection rdServiceSelection-table rdServiceSelection-silver">
             <li class="heading">
-              <h4>Silver<span class="small">50% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdServiceSelection2">
+                <h4>Silver<span class="small">50% pick this</span>
+                <input type="radio" id="rdServiceSelection2" name="rdServiceSelection2" class="rdServiceSelection" value="silver">
+                </h4>
+              </label>
             </li>
             <li class="value">$2M</li>
             <li class="value">$1000</li>
@@ -369,11 +373,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection">
+          <ul class="priceTable-Selection rdServiceSelection-table rdServiceSelection-gold">
             <li class="heading">
-              <h4>Gold<span class="small">25% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdServiceSelection3">
+                <h4>Gold<span class="small">25% pick this</span>
+                <input type="radio" id="rdServiceSelection3" name="rdServiceSelection3" class="rdServiceSelection" value="gold">
+                </h4>
+              </label>
             </li>
             <li class="value">$3M</li>
             <li class="value">$500</li>
@@ -393,11 +399,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection active">
+          <ul class="priceTable-Selection rdErrorSelection-table rdErrorSelection-bronze">
             <li class="heading">
-              <h4>Bronze<span class="small">75% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdErrorSelection1">
+                <h4>Bronze<span class="small">75% pick this</span>
+                <input type="radio" id="rdErrorSelection1" name="rdErrorSelection1" class="rdErrorSelection" value="bronze">
+                </h4>
+              </label>
             </li>
             <li class="value">$1M</li>
             <li class="value">$2000</li>
@@ -406,11 +414,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection">
+          <ul class="priceTable-Selection rdErrorSelection-table rdErrorSelection-silver">
             <li class="heading">
-              <h4>Silver<span class="small">50% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdErrorSelection2">
+                <h4>Silver<span class="small">50% pick this</span>
+                <input type="radio" id="rdErrorSelection2" name="rdErrorSelection2" class="rdErrorSelection" value="silver">
+                </h4>
+              </label>
             </li>
             <li class="value">$2M</li>
             <li class="value">$1000</li>
@@ -419,11 +429,13 @@
           </ul>
         </div>
         <div class="span2 priceTable-Element">
-          <ul class="priceTable-Selection">
+          <ul class="priceTable-Selection rdErrorSelection-table rdErrorSelection-gold">
             <li class="heading">
-              <h4>Gold<span class="small">25% pick this</span>
-              <input type="radio" name="rdServiceSelection1" value="yes">
-              </h4>
+              <label for="rdErrorSelection3">
+                <h4>Gold<span class="small">25% pick this</span>
+                <input type="radio" id="rdErrorSelection3" name="rdErrorSelection3" class="rdErrorSelection" value="gold">
+                </h4>
+              </label>
             </li>
             <li class="value">$3M</li>
             <li class="value">$500</li>
@@ -446,13 +458,14 @@
   </div>
   <div class='right-panel'>
     <div class='progress-bar-section'>
-      <div class="progress-bar-value">Accuracy <span class="val">50%</span></div>
+      <div class="progress-bar-value">Accuracy <span class="val">0%</span></div>
       <div class="progress-bar">
-        <div class="progress-bar-completed"></div>
+        <div class="progress-bar-completed" style="width:0%;"></div>
       </div>
     </div>
     <div class='product-cart'>
-      List of services Added
+      <span class='services-added'></span>
+      <span class='services-added-sub hide'>*you can change this later</span>
     </div>
     <div class='product-comparison-list'>
       <ul>
