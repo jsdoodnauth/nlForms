@@ -113,21 +113,39 @@ if (Meteor.isClient) {
     'click .btn-email': function(e) {
       $('.overlay').addClass('show');
     },
+    'click .clickme': function(e) {
+      console.log('clicked');
+    },
     'click .btn-submit': function(e) {
       var businessName = $('.inputCompany').val();
       var city = $('.inputCity').val();
       var status = $('.inputStatus').val();
       var rev = $('.inputRev').val();
       var industry = $('.inputIndustry').val();
+      var businessStatus = "";
+      var businessRevenue = 0;
 
+
+/* // OUTPUT TO SCREEN FOR DEMO ONLY
       var str = "Company: " + businessName + "<br />City: " + city + "<br /> ";
-      if (status == 1) { str += "Business: New" }
-      if (status == 2) { str += "Business: Existing" }
-      if (rev.length > 0) { str += "<br />Revenue: $" + rev; }
+      if (status == 1) { str += "Business: New"; businessStatus = "New"; }
+      if (status == 2) { str += "Business: Existing" businessStatus = "Existing"; }
+      if (rev.length > 0) { str += "<br />Revenue: $" + rev; businessRevenue=rev; }
       str += "<br />Industry: " + industry;
       $('.overlay .data-output').html(str);
       $('.overlay .heading').hide();
       $('.overlay').addClass('show');
+*/
+      quoteUser = new Mongo.Collection("quoteUser");
+      quoteUser.insert({
+        businessName: businessName,
+        city: city,
+        status: businessStatus,
+        revenue: businessRevenue,
+        industry: industry,
+        createdAt: new Date()
+      });
+      Router.go('/createQuote');
     }
 
 

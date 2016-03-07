@@ -333,7 +333,7 @@ html { background: #F4F4F4; }
 .left-panel select.full { width: 100%; }
 .left-panel select { -webkit-appearance: none; -moz-appearance: none; text-indent: 0px;	text-overflow: ''; background: #FFF url("img/drop-down-arrow.png") no-repeat 90% center;}
 .left-panel select::-ms-expand { display: none; }
-.left-panel select option { padding: 0px 10px 0px 2px; }
+.left-panel select option { padding: 0px 25px 0px 2px; }
 .right-panel .btn-container { position: absolute; bottom:2em; right:2em; }
 .right-panel .button { background-color: #AEC300; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; color:#FFF; border: 0;}
 .right-panel .link-button { background-color: #FFF; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; border: 0; color:#00BCD4;  }
@@ -479,8 +479,8 @@ html { background: #F4F4F4; }
 .companyOperations-container,
 .finalizeService-container {
 	visibility: hidden;
-	opacity: 0;
-
+	opacity: 1;
+	height:0;
 	-webkit-transform: translateX(150%);
 	-moz-transform: translateX(150%);
 	transform: translateX(150%);
@@ -496,6 +496,7 @@ html { background: #F4F4F4; }
 .finalizeService-container.active {
 	visibility: visible;
 	opacity: 1;
+	height: auto;
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 	transform: translateX(0);

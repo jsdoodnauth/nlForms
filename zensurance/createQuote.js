@@ -97,43 +97,56 @@ function StepController(stepClass) {
   var DELAY = 1000;
   switch (stepClass) {
     case 1:
-      $('.companyStructure-container').removeClass('active').fadeOut();
-      $('.services-container').delay(DELAY).addClass('active').fadeIn();
+      $('.companyStructure-container').removeClass('active').fadeOut('fast', function() {
+        $('.services-container').delay(DELAY).addClass('active').fadeIn();
+        console.log('animation done');
+      });
+
       $('#btnBackStep').addClass('hide');
       break;
     case 2:
-      $('.services-container').removeClass('active').fadeOut();
       $('.companyLocation-container').removeClass('active').fadeOut();
-      $('.companyStructure-container').delay(DELAY).addClass('active').fadeIn();
+      $('.services-container').removeClass('active').fadeOut('fast', function() {
+        $('.companyStructure-container').delay(DELAY).addClass('active').fadeIn();
+      });
       $('#btnBackStep').removeClass('hide');
       break;
     case 3:
-      $('.companyStructure-container').removeClass('active').fadeOut();
       $('.companyOperations-container').removeClass('active').fadeOut();
-      $('.companyLocation-container').delay(DELAY).addClass('active').fadeIn();
+      $('.companyStructure-container').removeClass('active').fadeOut('fast', function() {
+          $('.companyLocation-container').delay(DELAY).addClass('active').fadeIn();
+      });
       break;
     case 4:
-      $('.companyLocation-container').removeClass('active').fadeOut();
       $('.finalizeService-container').removeClass('active').fadeOut();
-      $('.companyOperations-container').delay(DELAY).addClass('active').fadeIn();
+      $('.companyLocation-container').removeClass('active').fadeOut('fast', function() {
+          $('.companyOperations-container').delay(DELAY).addClass('active').fadeIn();
+      });
+
       break;
     case 5:
-      $('.companyOperations-container').removeClass('active').fadeOut();
-      $('.finalizeService-container').delay(DELAY).addClass('active').fadeIn();
+      $('.companyOperations-container').removeClass('active').fadeOut('fast', function() {
+          $('.finalizeService-container').delay(DELAY).addClass('active').fadeIn();
+      });
+
       break;
     case 6:
-      $('.finalizeService-container').removeClass('active').fadeOut();
-      $('.left-panel.service-selection-container').fadeOut();
-      $('.right-panel').fadeOut();
-      $('.carrier-selection-container').delay(DELAY).addClass('active').fadeIn();
+      $('.finalizeService-container').removeClass('active').fadeOut('fast', function() {
+          $('.left-panel.service-selection-container').fadeOut();
+          $('.right-panel').fadeOut();
+          $('.carrier-selection-container').delay(DELAY).addClass('active').fadeIn();
+      });
       break;
     case 7:
-      $('.carrier-selection-container').removeClass('active').fadeOut();
-      $('.payment-container').delay(DELAY).addClass('active').fadeIn();
+      $('.carrier-selection-container').removeClass('active').fadeOut('fast', function() {
+          $('.payment-container').delay(DELAY).addClass('active').fadeIn();
+      });
+
       break;
     case 8:
-      $('.payment-container').removeClass('active').fadeOut();
-      $('.completion-container').delay(DELAY).addClass('active').fadeIn();
+      $('.payment-container').removeClass('active').fadeOut('fast', function() {
+          $('.completion-container').delay(DELAY).addClass('active').fadeIn();
+      });
       $('html').css('background-color','#FFF');
       break;
     default:
