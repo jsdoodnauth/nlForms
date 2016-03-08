@@ -83,6 +83,9 @@ if (Meteor.isClient) {
       var val = $(e.target).val();
       $('.rdErrorSelection-table').removeClass('active');
       $('.rdErrorSelection-' + val).addClass('active');
+    },
+    'keypress #telBusiness': function(e) {
+      $('#telBusiness').val(formatPhoneNumber($('#telBusiness').val()));
     }
   });
 }
@@ -189,4 +192,8 @@ function animate(outgoingElement, animationOut, state, activeElement, animationI
     var wait2 = window.setTimeout( function(){
         $(activeElement).removeClass(animationIn)}, 600
     );
+}
+
+function formatPhoneNumber(val) {
+    return val.replace(/(\d{2})\-?/g, '$1-');
 }

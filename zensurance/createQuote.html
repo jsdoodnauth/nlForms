@@ -309,7 +309,7 @@
             </select>
           </div>
           <div class="span4">Phone Number<br />
-              <input type="tel" name="name" value="" placeholder="416-123-4567">
+              <input id='telBusiness' type="text" name="name" value="" placeholder="416-123-4567" onkeypress='return event.charCode == 8 || event.charCode == 46 || event.charCode <= 31 || (event.charCode >= 48 && event.charCode <= 57)'>
           </div>
         </div>
         <div class="row-fluid">
