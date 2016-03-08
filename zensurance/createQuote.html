@@ -1,5 +1,5 @@
 <template name="createQuote">
-  <div class='left-panel carrier-selection-container full-width-container'>
+  <div class='left-panel carrier-selection-container full-width-container animated'>
     <div class="steps-container">
       <p class="step-instuctions">Select which of the reputable carriers below from which you would like to purchase insurance</p>
       <div class='carrier-selection-list'>
@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <div class='left-panel payment-container full-width-container'>
+  <div class='left-panel payment-container full-width-container animated'>
     <div class="steps-container">
       <p class="step-instuctions">You have elected to buy the following coverage</p>
 
@@ -123,7 +123,7 @@
       </div>
     </div>
   </div>
-  <div class='left-panel completion-container full-width-container'>
+  <div class='left-panel completion-container full-width-container animated'>
     <div class="steps-container">
       <h1 class="finalTitle">Congrats!</h1>
       <p class="step-instuctions">
@@ -197,7 +197,7 @@
 
 <!-- ****************** -->
 <!-- ***** STEP 2 ***** -->
-    <div class="companyStructure-container">
+    <div class="companyStructure-container animated">
       <p class="step-instuctions">2. Now tell us more about your company:</p>
       <div class="companyStructure-form">
         <div class="row-fluid">
@@ -309,14 +309,14 @@
             </select>
           </div>
           <div class="span4">Phone Number<br />
-              <input type="text" name="name" value="" placeholder="416-123-4567">
+              <input type="tel" name="name" value="" placeholder="416-123-4567">
           </div>
         </div>
         <div class="row-fluid">
           <div class="span12">
             Do you own or rent the primary business location mentioned above?<br />
-            <input type="radio" name="rdHomeBusiness" value="no"> No
-            <input type="radio" name="rdHomeBusiness" value="yes"> Yes
+            <input type="radio" name="rdHomeBusiness" value="no"> Own
+            <input type="radio" name="rdHomeBusiness" value="yes"> Rent
           </div>
         </div>
       </div>
@@ -329,7 +329,7 @@
 </div>
 
 <!-- ****************** -->
-<!-- ***** STEP F - FINALIZE ***** -->
+<!-- ***** STEP 5 - FINALIZE ***** -->
 
     <div class="finalizeService-container animated">
       <div class="row-fluid priceTable-container">
@@ -446,8 +446,6 @@
       </div>
     </div>
 
-<!-- ****************** -->
-<!-- ***** STEP 5 - CONFIRM/PAYMENT ***** -->
 
 
 <!-- ****************** -->
@@ -457,6 +455,7 @@
 
   </div>
   <div class='right-panel'>
+    <div class='coverage-info-text'>Select coverage to start customizing your quote</div>
     <div class='progress-bar-section'>
       <div class="progress-bar-value">Accuracy <span class="val">0%</span></div>
       <div class="progress-bar">
@@ -464,10 +463,18 @@
       </div>
     </div>
     <div class='product-cart'>
-      <span class='services-added'></span>
-      <span class='services-added-sub hide'>*you can change this later</span>
+      <div class='services-added'>
+        <div class="services-added1">General Liability</div>
+        <div class="services-added2">Errors and Omissions</div>
+        <div class="services-added3">Directors & Officers</div>
+        <div class="services-added4">Business interruption</div>
+        <div class="services-added5">Property</div>
+        <div class="services-added6">Auto</div>
+      </div>
     </div>
+    <br />
     <div class='product-comparison-list'>
+      <h3>Recommended Rates</h3>
       <ul>
         <li>
           <img src="/img/company1-bw.png" alt="" /><div class="price-container"><span class="ellipsis"> .................. </span><span class="price"> $200<span class="per">/mo</span></span></div>
