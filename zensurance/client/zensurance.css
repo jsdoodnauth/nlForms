@@ -319,7 +319,9 @@ html { background: #F4F4F4; }
 .price-large .per { font-size: 0.5em; font-weight: normal; vertical-align: super; padding-left: 2px; }
 #payment-form .textRight { padding-top: 6px; }
 .payment-inner-container h2 { margin: 0.5em; font-weight: 400; }
-.payment-inner-container ul li { margin: 0.25em auto; }
+.payment-inner-container ul li { margin: 0.25em auto; font-size: 1.125em; }
+.payment-inner-container label { font-size: 1.125em; }
+#payment-form { font-size: 1.125em; }
 .left-panel.completion-container { background-color: #FFF; }
 .left-panel.completion-container .steps-container { width: 585px; }
 .left-panel.completion-container h1.finalTitle { font-size: 4em; }
@@ -327,7 +329,7 @@ html { background: #F4F4F4; }
 .left-panel .button { padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; background: #FFF; color:#00BCD4; border: 1px solid #00BCD4;}
 .left-panel .button:hover, .left-panel .button.active { background: #00BCD4; color:#FFF; cursor: pointer;}
 .left-panel input,
-.left-panel select { padding: 0.5em; color: #999; background-color: #FFF; border: 1px solid #D0CECF; border-radius: 0.25em; font-family: 'Lato', Calibri, Arial, sans-serif; }
+.left-panel select { font-size: 1em; padding: 0.5em; color: #999; background-color: #FFF; border: 1px solid #D0CECF; border-radius: 0.25em; font-family: 'Lato', Calibri, Arial, sans-serif; }
 .left-panel input.small { width: 3em; }
 .left-panel input.full,
 .left-panel select.full { width: 100%; }
@@ -342,7 +344,7 @@ html { background: #F4F4F4; }
 .button.btnGreen:active,
 .button.btnGreen:hover { background-color: #AEC300; padding: 0.5em 0.75em; font-size: 1.125em; border-radius: 0.25em; color:#FFF; border: 0; }
 .progress-bar-section { display:none; margin:0em auto 2em; text-align: center; }
-.progress-bar-section .progress-bar-value { display:inline-block; padding: 0 1em 0 0; font-weight: 400; }
+.progress-bar-section .progress-bar-value { display:inline-block; padding: 0 0.5em 0 0; font-size: 1.125em; font-weight: 400; }
 .progress-bar-section .progress-bar { background-color: #EAEAE6; width: 185px; height: 1em; border-radius: 5px; margin: 0.125em 0 0; vertical-align: top; display:inline-block; text-align: left; }
 .progress-bar-section .progress-bar .progress-bar-completed { width: 0%; height: 1em; background-color: #AEC300; display:inline-block; border-radius: 5em 0 0 5em; -webkit-transition:width linear 0.5s;  transition:width linear 0.5s; }
 
@@ -363,7 +365,7 @@ html { background: #F4F4F4; }
 	.progress-steps-container ul.progress-steps li.active:first-child .bar:before { content:""; background-image: none; background-color: #00bcd2; border-radius: 5px; left: -5px; }
 	.progress-steps-container ul.progress-steps li.complete:first-child .bar:before { content:""; background-image: none; background-color: #b7b9b8; border-radius: 5px; left: -5px; }
 
-.step-instuctions { font-weight: bold; margin: 1em 0 2em; }
+.step-instuctions { font-weight: bold; margin: 2em 0 2em; font-size: 1.125em; }
 
 .product-comparison-list { }
 	.product-comparison-list ul { list-style: none; margin:0; padding:0; }
@@ -393,9 +395,9 @@ html { background: #F4F4F4; }
 
 .services-container { margin: 0 auto; }
 .services-container ul.service-list { list-style: none; padding: 0; }
-.services-container ul.service-list > li { background: #FFF; padding: 2em; margin-bottom: 1em; box-shadow: 2px 2px 4px #999; }
+.services-container ul.service-list > li { background: #FFF; padding: 2em; margin-bottom: 1em; box-shadow: 2px 2px 4px #999; font-size: 1.125em; }
 .services-container ul.service-list > li .button { float:right; }
-.services-container ul.service-list > li h3 { margin: 0.25em auto; font-size: 1.5em; }
+.services-container ul.service-list > li h3 { margin: 0.25em auto; font-size: 1.25em; }
 .services-container ul.service-list > li h3 .small { font-size: 0.75em; font-style: italic; font-weight: normal; color: #B0B0B0; }
 .services-container ul.service-list > li p { margin-top: 1.5em; }
 .services-container ul.service-list > li li { list-style-type: disc; }
@@ -405,13 +407,13 @@ html { background: #F4F4F4; }
 /* Step 2 */
 
 .companyStructure-container { margin: 0 auto; }
-.companyStructure-container .companyStructure-form { margin: 0 auto; width: 75%; }
+.companyStructure-container .companyStructure-form { margin: 0 auto; width: 75%; font-size: 1.125em; }
 
 /******************/
 /* Step 3 */
 
 .companyLocation-container { margin: 0 auto; }
-.companyLocation-container .companyLocation-form { margin: 0 auto; width: 75%; }
+.companyLocation-container .companyLocation-form { margin: 0 auto; width: 75%; font-size: 1.125em;}
 
 /******************/
 /* Step 4 */
@@ -427,14 +429,14 @@ html { background: #F4F4F4; }
 .priceTable-container ul { list-style: none; margin: 0; padding: 0; }
 .priceTable-container ul h3 { font-size: 1.5em; margin: 0.125em;  }
 .priceTable-container ul h4 { font-size: 1.25em; margin: 0; }
-.priceTable-container ul h4 .small { display:block; font-size: 0.5em; font-style: italic; font-weight: normal; }
+.priceTable-container ul h4 .small { display:block; font-size: 0.6em; font-style: italic; font-weight: normal; }
 .priceTable-container ul.priceTable-Defs {}
 .priceTable-container ul.priceTable-Selection {}
 .priceTable-container ul.priceTable-Selection li { text-align: center; vertical-align: baseline; margin-bottom:2px; margin-right: 1px;}
 .priceTable-container ul.priceTable-Defs li.heading,
 .priceTable-container ul.priceTable-Selection li.heading { height: 5em; width: 100%; padding-top: 0.75em; }
 .priceTable-container ul.priceTable-Defs li.value,
-.priceTable-container ul.priceTable-Selection li.value { height: 5em; width: 100%; padding-top: 1.75em; }
+.priceTable-container ul.priceTable-Selection li.value { height: 5em; width: 100%; padding-top: 1.75em; font-size: 1.125em; }
 
 .priceTable-container ul.priceTable-Selection li.heading { background-color: #EAEAE6; }
 .priceTable-container ul.priceTable-Selection li.value { background-color: #FFF; }
@@ -443,8 +445,8 @@ html { background: #F4F4F4; }
 
 .priceTable-Element.span2 { margin: 1px; }
 
-.services-added { font-weight: 400;  }
-.services-added > div { display:none; }
+.services-added { font-weight: 400; font-size: 1.125em; }
+.services-added > div { display:none;  }
 
 .coverage-info-text { margin: 2em 0; font-size: 2.25em; color: #B0B0B0; font-weight: bold; text-align: center; position: absolute; }
 #btnNextStep { display:none; }
